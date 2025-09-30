@@ -1,22 +1,13 @@
-const accountId = 144553
-let accountEmail = "hitesh@google.com"
-var accountPassword = "12345"
-accountCity = "Jaipur"
-let accountState;
+const accountId = 9128907594
+let accountName = "Akarsh"
+let accountEmail = "Thisisakarshgupta@gmail.com"
+let accountPassword = "8888"
+let accountState = "Bihar"
+let accountCity = "Motihari"
 
-// accountId = 2 // not allowed
+// let for variable which value changable , but const for fised value ,
+// console.table for tabular formate output , 
+//console.log for normal  type output 
+console.log([accountCity, accountEmail])
 
-
-accountEmail = "hc@hc.com"
-accountPassword = "21212121"
-accountCity = "Bengaluru"
-
-console.log(accountId);
-
-/*
-Prefer not to use var
-because of issue in block scope and functional scope
-*/
-
-
-console.table([accountId, accountEmail, accountPassword, accountCity, accountState])
+console.table([accountId, accountName, accountEmail, accountPassword, accountState, accountCity])
