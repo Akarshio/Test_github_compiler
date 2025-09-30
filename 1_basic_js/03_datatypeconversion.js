@@ -32,6 +32,11 @@ console.log(typeof newValue)
 console.log(newValue)
 
 
+let str1 = "Hello "
+let str2 = "Akarsh"
+
+console.log(str1+str2);
+
 
 
 
