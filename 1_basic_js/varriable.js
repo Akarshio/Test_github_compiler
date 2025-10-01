@@ -11,3 +11,4 @@ let accountCity = "Motihari"
 console.log([accountCity, accountEmail])
 
 console.table([accountId, accountName, accountEmail, accountPassword, accountState, accountCity])
+
