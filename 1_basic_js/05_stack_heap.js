@@ -23,4 +23,3 @@ let stuName = name1
  console.log(data);
  console.log(newdata);
  
- 
