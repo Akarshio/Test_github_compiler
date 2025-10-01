@@ -12,3 +12,9 @@ console.log([accountCity, accountEmail])
 
 console.table([accountId, accountName, accountEmail, accountPassword, accountState, accountCity])
 
+const name = "Akarsh"
+const countid = 3
+
+console.log(`Hi My Name is ${name} And My lucky No is ${countid}`)
+
+
