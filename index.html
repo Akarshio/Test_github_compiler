@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>htnml Events </title>
+
+
+</head>
+<body id="body" style="background-color: white; color: red;">
+<h1> </h1>
+<h2>Color change </h2>
+<button id="toggle" >Toggle-button</button>
+<!--<div id="cursor" style="width: 20px; height: 20px; background: red; border-radius: 50%; position: absolute; pointer-events: none; transform: translate(-50% , -50%)"></div>-->
+<input type="text" name="" placeholder="Enter your name" id="name">
+<button id = "submit"  onclick="">submit</button>
+<div>
+     <ul id="unorder">
+
+     </ul>
+ </div>
+
+<div class="card">
+    <!-- Image -->
+    <img src="" alt="Profile Picture" class="card-img" height="100px" width="100px">
+
+    <div class="card-content">
+        <h1 class="card-name"></h1>
+        <!-- Name -->
+        <h2 class="card-follow"></h2>
+
+        <!-- Email -->
+        <p class="card-email"></p>
+
+        <!-- Action Button (Optional) -->
+        <a href="" class="card-btn">Contact Me</a>
+    </div>
+</div>
+
+<!--<button id="stop">Stop</button>-->
+<!--<div >-->
+<!--    <ul id="images">-->
+<!--        <li><img width="200px" id="photoshop" src="https://images.pexels.com/photos/3561339/pexels-photo-3561339.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt="photoshop"></li>-->
+<!--        <li><img width="200px" id="japan" src="https://images.pexels.com/photos/3532553/pexels-photo-3532553.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt=""></li>-->
+<!--        <li><img width="200px" id="river" src="https://images.pexels.com/photos/3532551/pexels-photo-3532551.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt=""></li>-->
+<!--        <li><img width="200px" id="owl" src="https://images.pexels.com/photos/3532552/pexels-photo-3532552.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt="" ></li>-->
+<!--        <li><img width="200px" id="prayer" src="https://images.pexels.com/photos/2522671/pexels-photo-2522671.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt=""></li>-->
+<!--        <li><a style="color: aliceblue;" href="https://google.com" id="google">Google</a></li>-->
+<!--    </ul>-->
+<!--</div>-->
+<script>
+    // const img = document.querySelector('.card-img');
+    // const nameElement = document.querySelector('.card-name');
+    // const emailElement = document.querySelector('.card-email');
+    // const btn = document.querySelector('.card-btn');
+    //
+    // const requestUrl = 'https://api.github.com/users/hiteshchoudhary';
+    // const xmr = new XMLHttpRequest();
+    //
+    // xmr.open('GET', requestUrl);
+    // xmr.onreadystatechange = function () {
+    //     if (xmr.readyState === 4 ) {
+    //         const data = JSON.parse(this.responseText);
+    //
+    //         // HTML elements mein data fill karna
+    //         nameElement.innerHTML = data.name;
+    //         // GitHub API aksar email 'null' deta hai, isliye Bio ya Followers dikhana better hai
+    //         nameElement.innerHTML = `Followers: ${data.followers}`
+    //         emailElement.innerHTML = data.bio;
+    //         img.src = data.avatar_url;
+    //         btn.href = data.html_url; // Button ko GitHub profile se link kar diya
+    //     }
+    // };
+    //
+    // xmr.send();
+
+</script>
+    <script src="array.js"></script>
+</body>
+</html>
+ const img = document.querySelector('.card-img')
+ const name = document.querySelector('.card-name')
+ const follower = document.querySelector('.card-follow')
+ const email = document.querySelector('.card-email')
+ const btn = document.querySelector('.card-btn')
+ const requestUrl = 'https://api.github.com/users/hiteshchoudhary';
+ const xmr = new XMLHttpRequest();
+ xmr.open('GET', requestUrl)
+ xmr.onreadystatechange = function () {
+    if ( xmr.readyState === 4 ) {
+        const dataGet = JSON.parse(this.responseText)
+        img.src = dataGet.avatar_url
+        name.innerText = dataGet.name
+        follower.innerText = dataGet.followers
+        email.innerText = dataGet.email
+        btn.href = dataGet.html_url
+
+  }
+}
+xmr.send();
+
+``
